@@ -49,8 +49,8 @@ end
 
 function AuraHandler:Init()
 	ControlAura.OnServerEvent:Connect(function(player, mode)
-		print(player, mode)
 		local playerdata = DataHandler.Get(player)
+		player.Character.Humanoid.WalkSpeed = 0
 
 		local able = false
 
@@ -85,7 +85,7 @@ function AuraHandler:Init()
 					if able == true then
 						AuraHandler:LoadEntryVFX(playerdata.Level, player)
 
-						local auraAnimation = script.AuraFarm
+						local auraAnimation = ReplicatedStorage.Animations.AuraFarm
 						local animationTrack = animator:LoadAnimation(auraAnimation)
 						animationTrack.Looped = true
 						animationTrack:Play()
@@ -101,6 +101,7 @@ function AuraHandler:Init()
 			if not character then
 				return
 			end
+			character.Humanoid.WalkSpeed = 16
 
 			if ActiveAnimations[player] then
 				ActiveAnimations[player]:Stop()
@@ -108,7 +109,8 @@ function AuraHandler:Init()
 			end
 
 			for _, descendant in pairs(character:GetDescendants()) do
-				if descendant:IsA("ParticleEmitter") then
+				print(descendant.Name)
+				if descendant:IsA("Attachment") then
 					task.spawn(function()
 						descendant.Enabled = false
 						task.delay(0.2, function()

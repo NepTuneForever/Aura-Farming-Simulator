@@ -3,10 +3,13 @@ local ProfileTemplate = {
 
 	Level = 1,
 	Exp = 0,
+	MaxExp = 100,
+
 	Rebirths = 0,
+
 	CurrentAura = {
-		AuraName = "",
-		AuraType = "",
+		AuraName = "Normal",
+		AuraType = "PlayerAura",
 	},
 
 	Currency = {

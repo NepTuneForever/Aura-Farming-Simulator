@@ -1,6 +1,7 @@
 local SprintController = {}
 local UserInputService = game:GetService("UserInputService")
 local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local player = Players.LocalPlayer
 local connections = {}
 local running = false
@@ -52,7 +53,7 @@ function SprintController.Start(config)
 	normalSpeed = config.WalkSpeed or normalSpeed
 	sprintSpeed = config.SprintSpeed or sprintSpeed
 
-	runningTrack = animator:LoadAnimation(script.Running)
+	runningTrack = animator:LoadAnimation(ReplicatedStorage.Animations.Running)
 	runningTrack.Looped = true
 	runningTrack.Priority = Enum.AnimationPriority.Action4
 

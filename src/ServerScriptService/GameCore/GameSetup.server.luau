@@ -11,7 +11,7 @@ local Leaderstats = require(ServerSource:WaitForChild("Leaderstats"))
 local AuraHandler = require(ServerSource:WaitForChild("AuraHandler"))
 local DataHandler = require(ServerSource:WaitForChild("DataHandler"))
 
-local ProfileStore = ProfileService.GetProfileStore("PlayerData_v1", ProfileTemplate)
+local ProfileStore = ProfileService.GetProfileStore("PlayerData_v2", ProfileTemplate)
 
 local function onPlayerAdded(player)
 	local profile = ProfileStore:LoadProfileAsync("Player_" .. player.UserId, "ForceLoad")
