@@ -26,9 +26,9 @@ function LeaderstatsService.OnPlayerAdded(self: LeaderstatsService, playerJoined
 		fetchUpdate(newValue)
 	end)
 
-	while true do
+	while task.wait() do
 		data:update({ "currency", "aura" }, function(lastValue: number)
-			return lastValue + 100
+			return lastValue + 5
 		end)
 
 		task.wait(3)
