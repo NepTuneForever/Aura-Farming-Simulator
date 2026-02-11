@@ -7,10 +7,6 @@ local LeaderstatsService = {}
 function LeaderstatsService.OnPlayerAdded(self: LeaderstatsService, playerJoined: Player)
 	local data = dataservice:waitForData(playerJoined)
 
-	if playerJoined:FindFirstChild("leaderstats") then
-		return
-	end
-
 	local leaderstats = Instance.new("Folder")
 	leaderstats.Name = "leaderstats"
 	leaderstats.Parent = playerJoined
