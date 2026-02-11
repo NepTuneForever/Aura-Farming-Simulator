@@ -1,31 +1,108 @@
 {
-  "name": "Aura Farming Simulator",
+  "name": "Anime Farming Simulator",
   "tree": {
     "$className": "DataModel",
 
-    "ReplicatedStorage": {
-      "Shared": {
-        "$path": "src/shared"
+      "ServerScriptService": {
+        "$className" : "ServerScriptService",
+        "$path" : "src/ServerScriptService",
+        "$ignoreUnknownInstances": true
       },
-      "Packages": {
-        "$path": "Packages"
-      }
-    },
 
-    "ServerScriptService": {
-      "Server": {
-        "$path": "src/server"
+      "ServerStorage": {
+        "$className": "ServerStorage",
+        "$path": "src/ServerStorage",
+        "$ignoreUnknownInstances": true
       },
-      "ServerPackages": {
-        "$path": "ServerPackages"
-      }
-    },
 
-    "StarterPlayer": {
-      "StarterPlayerScripts": {
-        "Client": {
-          "$path": "src/client"
+      "ReplicatedStorage": {
+        "$className": "ReplicatedStorage",
+        "$path": "src/ReplicatedStorage",
+        "$ignoreUnknownInstances": true,
+        "Packages": {
+          "$path": "Packages"
         }
+      },
+
+      "ReplicatedFirst": {
+        "$className": "ReplicatedFirst",
+        "$path": "src/ReplicatedFirst",
+        "$ignoreUnknownInstances": true
+      },
+
+      "StarterGui": {
+        "$className": "StarterGui",
+        "$path": "src/StarterGui",
+        "$ignoreUnknownInstances": true
+      },
+
+      "StarterPack": {
+        "$className": "StarterPack",
+        "$path": "src/StarterPack",
+        "$ignoreUnknownInstances": true
+      },
+
+      "StarterPlayer": {
+        "$className": "StarterPlayer",
+        "$path": "src/StarterPlayer",
+        "$ignoreUnknownInstances": true,
+
+        "StarterCharacterScripts": {
+          "$className": "StarterCharacterScripts",
+          "$path": "src/StarterCharacterScripts",
+          "$ignoreUnknownInstances": true
+        },
+
+        "StarterPlayerScripts": {
+          "$className": "StarterPlayerScripts",
+          "$path": "src/StarterPlayerScripts",
+          "$ignoreUnknownInstances": true
+        }
+      },
+
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      "Baseplate": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.38823,
+            0.37254,
+            0.38823
+          ],
+          "Locked": true,
+          "Position": [
+            0,
+            -10,
+            0
+          ],
+          "Size": [
+            512,
+            20,
+            512
+          ]
+        }
+      }
+    },
+    "Lighting": {
+      "$properties": {
+        "Ambient": [
+          0,
+          0,
+          0
+        ],
+        "Brightness": 2,
+        "GlobalShadows": true,
+        "Outlines": false,
+        "Technology": "Voxel"
+      }
+    },
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
       }
     }
   }
