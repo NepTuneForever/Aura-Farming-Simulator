@@ -1,5 +1,7 @@
 local DataTemplate = {
-    
+    currency = {
+        aura = 0
+    }
 }
 
 
