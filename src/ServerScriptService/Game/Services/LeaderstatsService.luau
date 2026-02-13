@@ -19,24 +19,16 @@ function LeaderstatsService.OnPlayerAdded(self: LeaderstatsService, playerJoined
 	aura.Name = "Aura"
 	aura.Parent = leaderstats
 	aura.Value = data:get({ "currency", "aura" })
-	fetchUpdate(aura.Value)
 
+	fetchUpdate(aura.Value)
 	data:getChangedSignal({ "currency", "aura" }):Connect(function(newValue)
 		aura.Value = newValue
 		fetchUpdate(newValue)
 	end)
-
-	while task.wait() do
-		data:update({ "currency", "aura" }, function(lastValue: number)
-			return lastValue + 5
-		end)
-
-		task.wait(3)
-	end
 end
 
 function LeaderstatsService.init(self: LeaderstatsService)
-	self.networker = Networker.server.new("LeaderstatsService", self)
+	self.networker = Networker.server.new("Leaderstats", self)
 
 	for _, player in Players:GetPlayers() do
 		self:OnPlayerAdded(player)

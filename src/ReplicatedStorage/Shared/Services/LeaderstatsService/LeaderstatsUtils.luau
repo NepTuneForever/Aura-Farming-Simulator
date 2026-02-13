@@ -2,9 +2,9 @@
 
 local LeaderstatsUtils = {}
 LeaderstatsUtils.Config = {
-    Animations = {
-        In = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut)
-    }
+	Animations = {
+		In = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+	},
 }
 
 type LeaderstatsUtils = typeof(LeaderstatsUtils)
