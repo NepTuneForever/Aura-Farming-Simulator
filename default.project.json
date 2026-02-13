@@ -1,5 +1,5 @@
 {
-  "name": "Aura Farming Simulator",
+  "name": "Anime Revengers",
   "tree": {
     "$className": "DataModel",
 
@@ -18,7 +18,10 @@
       "ReplicatedStorage": {
         "$className": "ReplicatedStorage",
         "$path": "src/ReplicatedStorage",
-        "$ignoreUnknownInstances": true
+        "$ignoreUnknownInstances": true,
+        "Packages": {
+          "$path": "Packages"
+        }
       },
 
       "ReplicatedFirst": {

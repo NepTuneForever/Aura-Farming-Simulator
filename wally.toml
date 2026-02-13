@@ -8,6 +8,9 @@ realm = "shared"
 Promise = "evaera/promise@4.0.0"
 Networker = "leifstout/networker@0.3.1"
 Signal = "sleitnick/signal@2.0.3"
+<<<<<<< HEAD
+dataservice = "leifstout/dataservice@0.4.0"
+=======
 
 [server-dependencies]
 DataService = "leifstout/dataservice@0.4.0"
@@ -15,3 +18,4 @@ DataService = "leifstout/dataservice@0.4.0"
 [place]
 shared-packages = "src/ReplicatedStorage/ServerPackages"
 server-packages = "src/ServerStorage/Packages"
+>>>>>>> dev
