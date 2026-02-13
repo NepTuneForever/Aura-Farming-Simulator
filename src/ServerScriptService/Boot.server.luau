@@ -1,6 +1,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 local DataTemplate = require(ServerScriptService.Game.Config.Data.DataTemplate)
+local CombatService = require(ServerScriptService.Game.Services.CombatService)
 local LeaderstatsService = require(ServerScriptService.Game.Services.LeaderstatsService)
 local dataservice = require(ReplicatedStorage.Packages.dataservice)
 
@@ -11,3 +12,4 @@ dataservice.server:init({
 })
 
 LeaderstatsService:init()
+CombatService:init()

@@ -12,7 +12,7 @@ function LeaderstatsClient.fetchUpdate(self : LeaderstatsClient, newValue : numb
 end
 
 function LeaderstatsClient.init(self : LeaderstatsClient)
-    self.networker = Networker.client.new('LeaderstatsService', self, {
+    self.networker = Networker.client.new('Leaderstats', self, {
         self.fetchUpdate
     })
 end

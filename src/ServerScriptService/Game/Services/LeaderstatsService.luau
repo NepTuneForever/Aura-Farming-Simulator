@@ -7,6 +7,11 @@ local LeaderstatsService = {}
 function LeaderstatsService.OnPlayerAdded(self: LeaderstatsService, playerJoined: Player)
 	local data = dataservice:waitForData(playerJoined)
 
+	local function fetchUpdate(newValue)
+		self.networker:fire(playerJoined, 'fetchUpdate', newValue)
+		
+	end
+
 	local leaderstats = Instance.new("Folder")
 	leaderstats.Name = "leaderstats"
 	leaderstats.Parent = playerJoined
@@ -16,8 +21,10 @@ function LeaderstatsService.OnPlayerAdded(self: LeaderstatsService, playerJoined
 	aura.Parent = leaderstats
 	aura.Value = data:get({ "currency", "aura" })
 
+	fetchUpdate(aura.Value)
 	data:getChangedSignal({ "currency", "aura" }):Connect(function(newValue)
 		aura.Value = newValue
+		fetchUpdate(newValue)
 	end)
 end
 
