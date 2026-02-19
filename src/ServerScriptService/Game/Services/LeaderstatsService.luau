@@ -18,10 +18,10 @@ function LeaderstatsService.OnPlayerAdded(self: LeaderstatsService, playerJoined
 	local aura = Instance.new("IntValue")
 	aura.Name = "Aura"
 	aura.Parent = leaderstats
-	aura.Value = data:get({ "currency", "aura" })
+	aura.Value = data:get({ "Currency", "Aura" })
 
 	fetchUpdate(aura.Value)
-	data:getChangedSignal({ "currency", "aura" }):Connect(function(newValue)
+	data:getChangedSignal({ "Currency", "Aura" }):Connect(function(newValue)
 		aura.Value = newValue
 		fetchUpdate(newValue)
 	end)
